@@ -16,7 +16,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 14px 16px;
+        padding: 8px 10px;
         transition: 0.3s;
       }
 
@@ -33,7 +33,7 @@
       /* Style the tab content */
       .tabcontent {
         display: none;
-        padding: 6px 12px;
+        padding: 5px 5px;
         border: 1px solid #ccc;
         border-top: none;
       }
@@ -73,12 +73,20 @@
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("defaultOpen").click();
+      });
     </script>
   </head>
   <body>
     <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Dashboard')">
-        Dashboard
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'Dashboard')"
+        id="defaultOpen"
+      >
+        Summary
       </button>
       <button class="tablinks" onclick="openTab(event, 'DeepDive')">
         Deep Dive
